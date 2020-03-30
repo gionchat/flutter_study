@@ -9,10 +9,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-main()=>runApp(LoginAnimPage());
+main() => runApp(LoginAnimPage());
 
 class LoginAnimPage extends StatelessWidget {
-  final SystemUiOverlayStyle _style = SystemUiOverlayStyle(statusBarColor: Colors.transparent);
+  final SystemUiOverlayStyle _style =
+      SystemUiOverlayStyle(statusBarColor: Colors.transparent);
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(_style);
@@ -33,7 +35,6 @@ class LoginAnimStatefulWidget extends StatefulWidget {
 }
 
 class _LoginAnimState extends State<StatefulWidget> {
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

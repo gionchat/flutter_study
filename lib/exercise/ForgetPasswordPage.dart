@@ -17,7 +17,6 @@ class ForgetPasswordPage extends StatefulWidget {
 }
 
 class _ForgetPasswordState extends State<ForgetPasswordPage> {
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

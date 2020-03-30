@@ -9,9 +9,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-
 class TestContainerPage extends StatelessWidget {
-  final SystemUiOverlayStyle _style = SystemUiOverlayStyle(statusBarColor: Colors.transparent);
+  final SystemUiOverlayStyle _style =
+      SystemUiOverlayStyle(statusBarColor: Colors.transparent);
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(_style);
@@ -32,7 +33,6 @@ class TestContainerStatefulWidget extends StatefulWidget {
 }
 
 class _TestContainerState extends State<StatefulWidget> {
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

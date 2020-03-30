@@ -17,21 +17,29 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterState extends State<RegisterPage> {
-
   TextEditingController usernameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   TextEditingController passwordConfirmController = TextEditingController();
 
   final InputDecoration inputDecoration = InputDecoration(
-      hintText: "Nome",
-      border: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey),borderRadius: BorderRadius.all(Radius.circular(5))),
-      focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.blueAccent,width: 1.5),borderRadius: BorderRadius.all(Radius.circular(5))),
-       enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.blueAccent,width: 1.5,),borderRadius: BorderRadius.all(Radius.circular(5))),
+    hintText: "Nome",
+    border: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.grey),
+        borderRadius: BorderRadius.all(Radius.circular(5))),
+    focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.blueAccent, width: 1.5),
+        borderRadius: BorderRadius.all(Radius.circular(5))),
+    enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: Colors.blueAccent,
+          width: 1.5,
+        ),
+        borderRadius: BorderRadius.all(Radius.circular(5))),
     contentPadding: EdgeInsets.all(15),
-      fillColor: Colors.white,
-      filled: true,
-      hintStyle: TextStyle(color: Colors.grey,fontSize: 14),
-      counterText: "",
+    fillColor: Colors.white,
+    filled: true,
+    hintStyle: TextStyle(color: Colors.grey, fontSize: 14),
+    counterText: "",
   );
 
   @override
@@ -43,7 +51,7 @@ class _RegisterState extends State<RegisterPage> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
           child: Column(
             children: <Widget>[
               Material(
@@ -57,7 +65,9 @@ class _RegisterState extends State<RegisterPage> {
                   decoration: inputDecoration.copyWith(hintText: "用户名"),
                 ),
               ),
-              SizedBox(height: 15,),
+              SizedBox(
+                height: 15,
+              ),
               Material(
                 borderRadius: BorderRadius.all(Radius.circular(5)),
                 child: TextField(
@@ -69,7 +79,9 @@ class _RegisterState extends State<RegisterPage> {
                   decoration: inputDecoration.copyWith(hintText: "密码"),
                 ),
               ),
-              SizedBox(height: 15,),
+              SizedBox(
+                height: 15,
+              ),
               Material(
                 borderRadius: BorderRadius.all(Radius.circular(5)),
                 child: TextField(
@@ -81,18 +93,23 @@ class _RegisterState extends State<RegisterPage> {
                   decoration: inputDecoration.copyWith(hintText: "确认密码"),
                 ),
               ),
-
-              SizedBox(height: 30,),
+              SizedBox(
+                height: 30,
+              ),
               Material(
                 elevation: 5,
                 color: Colors.blue,
                 borderRadius: BorderRadius.all(Radius.circular(5)),
                 child: MaterialButton(
                     minWidth: double.infinity,
-                    child: Text("注册",style: TextStyle(color: Colors.white,fontSize: 15),),
-                    onPressed: (){
-                  print("jeek flutter 注册 username: ${usernameController.text} password: ${passwordController.text} password confirm: ${passwordConfirmController.text}");
-                }),
+                    child: Text(
+                      "注册",
+                      style: TextStyle(color: Colors.white, fontSize: 15),
+                    ),
+                    onPressed: () {
+                      print(
+                          "jeek flutter 注册 username: ${usernameController.text} password: ${passwordController.text} password confirm: ${passwordConfirmController.text}");
+                    }),
               )
             ],
           ),

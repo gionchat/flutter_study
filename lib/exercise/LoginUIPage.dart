@@ -38,7 +38,6 @@ class LoginUIStatefulWidget extends StatefulWidget {
 }
 
 class _LoginUIState extends State<StatefulWidget> {
-
   TextEditingController usernameController = new TextEditingController();
   TextEditingController passwordController = new TextEditingController();
 
@@ -73,14 +72,18 @@ class _LoginUIState extends State<StatefulWidget> {
                     keyboardType: TextInputType.emailAddress,
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                      icon: Padding(
-                        padding: const EdgeInsets.only(left: 10),
-                        child: Icon(Icons.phone_iphone,color: Colors.white,),
-                      ),
+                        icon: Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Icon(
+                            Icons.phone_iphone,
+                            color: Colors.white,
+                          ),
+                        ),
                         border: InputBorder.none,
                         hintText: "请输入账号",
                         contentPadding: EdgeInsets.symmetric(vertical: 15),
-                        hintStyle: TextStyle(color: Colors.white, fontSize: 14)),
+                        hintStyle:
+                            TextStyle(color: Colors.white, fontSize: 14)),
                   ),
                 ),
                 SizedBox(
@@ -95,17 +98,23 @@ class _LoginUIState extends State<StatefulWidget> {
                     keyboardType: TextInputType.emailAddress,
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                      icon: Padding(
-                        padding: const EdgeInsets.only(left: 10),
-                        child: Icon(Icons.vpn_key,color: Colors.white,),
-                      ),
+                        icon: Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Icon(
+                            Icons.vpn_key,
+                            color: Colors.white,
+                          ),
+                        ),
                         border: InputBorder.none,
                         hintText: "请输入密码",
                         contentPadding: EdgeInsets.symmetric(vertical: 10),
-                        hintStyle: TextStyle(color: Colors.white, fontSize: 14)),
+                        hintStyle:
+                            TextStyle(color: Colors.white, fontSize: 14)),
                   ),
                 ),
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: 20,
+                ),
                 Material(
                   elevation: 5.0,
                   borderRadius: BorderRadius.all(Radius.circular(5)),
@@ -113,10 +122,15 @@ class _LoginUIState extends State<StatefulWidget> {
                   child: MaterialButton(
                       minWidth: double.infinity,
                       padding: EdgeInsets.symmetric(vertical: 10),
-                      child: Text("登录",style: TextStyle(color: Colors.white,fontSize: 18),),
-                      onPressed: (){
-                        print("jeek flutter 登录 username: ${usernameController.text} password: ${passwordController.text}");
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
+                      child: Text(
+                        "登录",
+                        style: TextStyle(color: Colors.white, fontSize: 18),
+                      ),
+                      onPressed: () {
+                        print(
+                            "jeek flutter 登录 username: ${usernameController.text} password: ${passwordController.text}");
+                        Navigator.pushReplacement(context,
+                            MaterialPageRoute(builder: (context) {
                           return HomePage();
                         }));
                       }),
@@ -124,35 +138,43 @@ class _LoginUIState extends State<StatefulWidget> {
                 Row(
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 15, vertical: 10),
                       child: InkWell(
-                        onTap: (){
+                        onTap: () {
                           print("jeek flutter InkWell 忘记密码");
-                          Navigator.push(context, MaterialPageRoute(builder: (context){
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
                             return ForgetPasswordPage();
                           }));
                         },
                         child: Text(
                           "忘记密码",
                           style: TextStyle(
-                              color: Colors.white.withOpacity(0.6), fontSize: 14,),
+                            color: Colors.white.withOpacity(0.6),
+                            fontSize: 14,
+                          ),
                         ),
                       ),
                     ),
                     Expanded(child: Text("")),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 15, vertical: 10),
                       child: InkWell(
-                        onTap: (){
+                        onTap: () {
                           print("jeek flutter InkWell 注册");
-                          Navigator.push(context, MaterialPageRoute(builder: (context){
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
                             return RegisterPage();
                           }));
                         },
                         child: Text(
                           "注册",
                           style: TextStyle(
-                              color: Colors.white.withOpacity(0.6), fontSize: 14,),
+                            color: Colors.white.withOpacity(0.6),
+                            fontSize: 14,
+                          ),
                         ),
                       ),
                     ),
