@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_study/exercise/ForgetPasswordPage.dart';
 import 'package:flutter_study/exercise/HomePage.dart';
 import 'package:flutter_study/exercise/RegisterPage.dart';
+import 'package:toast/toast.dart';
 
 main() => runApp(LoginUIPage());
 
@@ -60,7 +61,7 @@ class _LoginUIState extends State<StatefulWidget> {
                   padding: const EdgeInsets.only(top: 80, bottom: 50),
                   child: Image(
                     image: AssetImage("res/drawable/logo.png"),
-                    width: 70,
+                    width: 90,
                   ),
                 ),
                 Material(
@@ -113,20 +114,21 @@ class _LoginUIState extends State<StatefulWidget> {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 Material(
                   elevation: 5.0,
-                  borderRadius: BorderRadius.all(Radius.circular(5)),
-                  color: Colors.blue,
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  color: Color(0xFF00DDCC),
                   child: MaterialButton(
                       minWidth: double.infinity,
-                      padding: EdgeInsets.symmetric(vertical: 10),
+                      padding: EdgeInsets.symmetric(vertical: 10,horizontal: 30),
                       child: Text(
                         "登录",
                         style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
                       onPressed: () {
+                        Toast.show("登录成功", context,duration: 2);
                         print(
                             "jeek flutter 登录 username: ${usernameController.text} password: ${passwordController.text}");
                         Navigator.pushReplacement(context,
@@ -143,6 +145,7 @@ class _LoginUIState extends State<StatefulWidget> {
                       child: InkWell(
                         onTap: () {
                           print("jeek flutter InkWell 忘记密码");
+                          Toast.show("忘记密码", context);
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
                             return ForgetPasswordPage();
@@ -164,6 +167,7 @@ class _LoginUIState extends State<StatefulWidget> {
                       child: InkWell(
                         onTap: () {
                           print("jeek flutter InkWell 注册");
+                          Toast.show("注册", context);
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
                             return RegisterPage();
